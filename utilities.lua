@@ -3,11 +3,11 @@ function dump(t, indent)
   for k, v in pairs(t) do
     local kstr = "["..tostr(k).."]"
     if type(v) == "table" then
-      printh(indent..kstr.." = {", 'log.txt')
+      printh(indent..kstr.." = {", 'log.log')
       dump(v, indent.."  ")
-      printh(indent.."}", 'log.txt')
+      printh(indent.."}", 'log.log')
     else
-      printh(indent..kstr.." = "..tostr(v), 'log.txt')
+      printh(indent..kstr.." = "..tostr(v), 'log.log')
     end
   end
 end
